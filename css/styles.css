@@ -1,0 +1,60 @@
+/*
+Текст: 
+белый #FFFFFF;
+голубой  #2196F3;
+черный #212121;
+черный полу-прозрачный #757575
+черый для контактов в футере rgba(255, 255, 255, 0.6);
+
+Фон:
+фон вторичный темный #2F303A;
+фон вторичный белый #F5F5F5;
+фон вторичный светло-серый #F5F4FA;
+ */
+
+:root{
+    --primary-text-color: #757575;
+    --title-text-color: #212121;
+    --additional-link-color: rgba(255, 255, 255, 0.6);
+    --accent-color: #2196F3;
+
+    --primary-background-color:#FFFFFF;
+    --additional-background-color:#F5F5F5;
+    --accent-background-color: #2F303A;
+    --second-accent-background-color: #F5F4FA;
+}
+
+body{
+    background-color: var(--primary-background-color);
+    color: var(--primary-text-color);
+}
+.list{
+    list-style: none;
+}
+.logo{
+    color: #FFFFFF;
+    background-color: #757575;
+
+}
+.logo-el{
+    color: var(--accent-color);
+}
+/* Site nav*/
+
+.site-nav .link{
+    color: var(--title-text-color);
+}
+.site-nav .link:hover,
+.site-nav .link:focus{
+    color: var(--accent-color);
+}
+.hero{
+    color:#FFFFFF;
+    background-color: #757575;
+}
+.section-title {
+    color:var(--title-text-color);
+}
+.features .title{
+    color:var(--title-text-color);
+}
