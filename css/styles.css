@@ -1,26 +1,22 @@
-/*
-Текст: 
-белый #FFFFFF;
-голубой  #2196F3;
-черный #212121;
-черный полу-прозрачный #757575
-черый для контактов в футере rgba(255, 255, 255, 0.6);
-
-Фон:
-фон вторичный темный #2F303A;
-фон вторичный белый #F5F5F5;
-фон вторичный светло-серый #F5F4FA;
- */
-
 :root{
+    /* Текст */
+    /* Колір тексту в абзацах */
     --primary-text-color: #757575;
+    /* Колір заголовків */
     --title-text-color: #212121;
-    --additional-link-color: rgba(255, 255, 255, 0.6);
+    /* Колір посилань на мейл і телефон у футері */
+    --link-address-bottom-color: rgba(255, 255, 255, 0.6);
+    /* Акцентний колір макету */
     --accent-color: #2196F3;
+    /* Колір другої частини тексту логотипу */
+    --logo-second-color: #000000;
 
-    --primary-background-color:#FFFFFF;
-    --additional-background-color:#F5F5F5;
-    --accent-background-color: #2F303A;
+    /* Фон */
+    /* Основний колір сторінки*/
+    --primary-background-color: #FFFFFF;
+    /* Темні ділянки фону */
+    --accent-background-color: #2F303A; 
+    /* Світло-сірі ділянки фону */
     --second-accent-background-color: #F5F4FA;
 }
 
@@ -28,19 +24,22 @@ body{
     background-color: var(--primary-background-color);
     color: var(--primary-text-color);
 }
+/* Обнулення маркування списків */
 .list{
     list-style: none;
 }
+/* Стилізування шапки */
+/* Лого */
 .logo{
-    color: #FFFFFF;
-    background-color: #757575;
-
+    color: var(--logo-second-color);
 }
 .logo-el{
     color: var(--accent-color);
 }
-/* Site nav*/
-
+/*Стилізування елементів навігації*/
+.link{
+    text-decoration: none;
+}
 .site-nav .link{
     color: var(--title-text-color);
 }
@@ -48,13 +47,76 @@ body{
 .site-nav .link:focus{
     color: var(--accent-color);
 }
-.hero{
-    color:#FFFFFF;
-    background-color: #757575;
+/* Відображення поточної сторінки*/
+.site-nav .link.current{
+    color: var(--accent-color);
 }
+.contact .link{
+    color: var(--primary-text-color);
+}
+.contact .link:hover,
+.contact .link:focus{
+    color: var(--accent-color);
+}
+
+/* Блок Герой */
+.section-hero .title{
+    color:#FFFFFF;
+}
+.section-hero{
+    background-color: var(--accent-background-color);
+}
+
+/* Стилізування заголовків h2 */
 .section-title {
     color:var(--title-text-color);
 }
+
+/* Стилізування заголовків h3 */
 .features .title{
     color:var(--title-text-color);
 }
+
+/* Секція Наша команда */
+.team{
+    background-color: var(--second-accent-background-color);
+}
+.team .title{
+    color: var(--title-text-color);
+}
+/* Кнопки */
+.button{
+    
+}
+/* Кнопка Замовити послугу */
+.button.primary{
+    color: var(--primary-background-color);
+    background-color: var(--accent-color);
+}
+/* Кнопки сторінки портфоліо */
+.button.secondary{
+    color: var(--title-text-color);
+    background-color: var(--second-accent-background-color);
+}
+.button.secondary:hover,
+.button.secondary:focus{
+    background-color:var(--accent-color);
+}
+
+
+/* Стилізування футеру */
+.bottom{
+    background-color: var(--title-text-color);
+}
+.bottom .logo{
+    color: #FFFFFF;
+}
+
+.bottom .link{
+    color: var(--link-address-bottom-color);
+}
+.bottom .link.address {
+    color: var(--primary-background-color);
+}
+
+
