@@ -13,7 +13,7 @@
 
     /* Фон */
     /* Основний колір сторінки*/
-    --primary-background-color: #FFFFFF;
+    --primary-white-color: #FFFFFF;
     /* Темні ділянки фону */
     --accent-background-color: #2F303A; 
     /* Світло-сірі ділянки фону */
@@ -21,25 +21,35 @@
 }
 
 body{
-    background-color: var(--primary-background-color);
+    background-color: var(--primary-white-color);
     color: var(--primary-text-color);
+    font-family: Roboto, sans-serif;
+    letter-spacing: 0.03em;
 }
 /* Обнулення маркування списків */
 .list{
     list-style: none;
 }
+
+
 /* Стилізування шапки */
 /* Лого */
 .logo{
     color: var(--logo-second-color);
+    font-family: Raleway;
+    font-size: 26px;
+    line-height: 1.19;
 }
 .logo-el{
     color: var(--accent-color);
 }
-/*Стилізування елементів навігації*/
+/*Загальне для посилань*/
 .link{
     text-decoration: none;
+    font-size: 14px;
+    line-height: 1.14;
 }
+/*Стилізування елементів навігації*/
 .site-nav .link{
     color: var(--title-text-color);
 }
@@ -47,6 +57,28 @@ body{
 .site-nav .link:focus{
     color: var(--accent-color);
 }
+
+/* Стилізування футеру */
+.bottom {
+    background-color: var(--title-text-color);
+}
+
+.bottom .logo {
+    color: #FFFFFF;
+}
+
+.bottom .link {
+    color: var(--link-address-bottom-color);
+    line-height: 1.71;
+}
+
+.bottom .address {
+    color: var(--primary-white-color);
+}
+address {
+    font-style: normal;
+}
+
 /* Відображення поточної сторінки*/
 .site-nav .link.current{
     color: var(--accent-color);
@@ -59,22 +91,40 @@ body{
     color: var(--accent-color);
 }
 
+
+
+/* CТУДІЯ */
+/* Стилізування заголовків h2 */
+.section-title {
+    color: var(--title-text-color);
+    font-size: 36px;
+    line-height: 1.16;
+    font-weight: 700;
+
+}
+/* Стилізування заголовків h3 */
+.title{
+    color: var(--title-text-color);
+}
+.features .title {
+    font-size: 14px;
+    line-height: 1.14;
+    font-weight: 700;
+}
+.team .title{
+    font-size: 16px;
+    line-height: 1.18;
+    font-weight: 500;
+}
 /* Блок Герой */
 .section-hero .title{
-    color:#FFFFFF;
+    color:var(--primary-white-color);
+    font-size: 44px;
+    line-height: 1.36;
+    font-weight: 900;
 }
 .section-hero{
     background-color: var(--accent-background-color);
-}
-
-/* Стилізування заголовків h2 */
-.section-title {
-    color:var(--title-text-color);
-}
-
-/* Стилізування заголовків h3 */
-.features .title{
-    color:var(--title-text-color);
 }
 
 /* Секція Наша команда */
@@ -84,39 +134,49 @@ body{
 .team .title{
     color: var(--title-text-color);
 }
-/* Кнопки */
+/* Всі Кнопки */
 .button{
-    
+    font-family: inherit;
 }
 /* Кнопка Замовити послугу */
 .button.primary{
-    color: var(--primary-background-color);
+    color: var(--primary-white-color);
     background-color: var(--accent-color);
+
+    font-size: 16px;
+    line-height: 2.25;
+    font-weight: 700;
 }
+
+/* ПОРТФОЛІО */
 /* Кнопки сторінки портфоліо */
-.button.secondary{
+.button.secondary {
     color: var(--title-text-color);
     background-color: var(--second-accent-background-color);
+
+    font-size: 16px;
+    line-height: 1.62;
+    font-weight: 500;
 }
+
 .button.secondary:hover,
-.button.secondary:focus{
-    background-color:var(--accent-color);
+.button.secondary:focus {
+    background-color: var(--accent-color);
+    color: var(--primary-white-color);
 }
 
-
-/* Стилізування футеру */
-.bottom{
-    background-color: var(--title-text-color);
+.portfolio{
+    text-decoration: none;
 }
-.bottom .logo{
-    color: #FFFFFF;
-}
-
-.bottom .link{
-    color: var(--link-address-bottom-color);
-}
-.bottom .link.address {
-    color: var(--primary-background-color);
+/* Стилізування h2(portfolio) */
+.portfolio-title{
+    font-size: 18px;
+    line-height: 2;
+    font-weight: 700;
+    letter-spacing: 0.06;
 }
 
+/* Стилізування p(portfolio) */
+.portfolio-text{
 
+}
