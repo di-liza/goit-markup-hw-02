@@ -1,33 +1,20 @@
 :root{
-    /* Текст */
-    /* Колір тексту в абзацах */
     --primary-text-color: #757575;
-    /* Колір заголовків */
     --title-text-color: #212121;
-    /* Колір посилань на мейл і телефон у футері */
     --link-address-bottom-color: rgba(255, 255, 255, 0.6);
-    /* Акцентний колір макету */
     --accent-color: #2196F3;
-    /* Колір другої частини тексту логотипу */
     --logo-second-color: #000000;
 
-    /* Фон */
-    /* Основний колір сторінки*/
     --primary-white-color: #FFFFFF;
-    /* Темні ділянки фону */
     --accent-background-color: #2F303A; 
-    /* Світло-сірі ділянки фону */
     --second-accent-background-color: #F5F4FA;
-
-    --primary-letter-spacing: 0.03em;
-    --added-letter-spacing: 0.06em;
 }
 
 body{
     background-color: var(--primary-white-color);
     color: var(--primary-text-color);
-    font-family: 'Roboto', 'Raleway', sans-serif;
-    letter-spacing: var(--primary-letter-spacing);
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.03em;
 }
 /* Обнулення маркування списків */
 .list{
@@ -37,21 +24,22 @@ body{
 /*Загальне для посилань*/
 .link {
     text-decoration: none;
-    font-size: 14px;
-    
+    color: var(--primary-text-color);
 }
 
 /* Загальне для кнопок */
 .button {
     font-family: inherit;
-    letter-spacing: var(--primary-letter-spacing);
+    letter-spacing: 0.03em;
+    border: none;
+    cursor: pointer;
 }
 
-/* Стилізування шапки */
+/* Шапка */
 /* Лого */
 .logo{
     color: var(--logo-second-color);
-    font-family: Raleway;
+    font-family: 'Raleway', sans-serif;
     font-size: 26px;
     line-height: 1.19;
 }
@@ -59,85 +47,44 @@ body{
     color: var(--accent-color);
 }
 
-/*Стилізування елементів навігації*/
+/*Навігація*/
+.site-nav{
+    font-weight: 500;
+}
 .site-nav .link{
     color: var(--title-text-color);
+    letter-spacing: 0.02em;
+    font-size: 14px;
+    line-height: 1.17;
 }
 .site-nav .link:hover,
 .site-nav .link:focus{
     color: var(--accent-color);
 }
-.contact .link{
-    letter-spacing: 0.02em;
-}
-
-/* Стилізування футеру */
-.bottom {
-    background-color: var(--title-text-color);
-    line-height: 1.71;
-}
-.logo-second-el{
-    color: var(--primary-white-color);
-}
-.bottom-address{
-    font-style: normal;
-}
-    /* color: var(--link-address-bottom-color); */
-.location{
-    color: var(--primary-white-color);
-}
-
-.bottom .contact{
-    color: var(--link-address-bottom-color);
-}
-
-.bottom .contact:hover,
-.bottom .contact:focus{
-    color: var(--accent-color);
-}
-
-
 
 /* Відображення поточної сторінки*/
 .site-nav .link.current{
     color: var(--accent-color);
 }
-/* Виділення і псевдостани */
-.contact .link{
+/* Виділення і псевдостани посилань на сторінки*/
+.header .contact{
     color: var(--primary-text-color);
+    letter-spacing: 0.02em;
+    font-weight: 500;
 }
-.contact .link:hover,
-.contact .link:focus{
+/* .contact.link{
+    color: var(--primary-text-color);
+    letter-spacing: 0.03em;
+} */
+.contact.link:hover,
+.contact.link:focus{
     color: var(--accent-color);
 }
 
 
+/* -------CТУДІЯ-------*/
 
-/* CТУДІЯ */
-/* Стилізування заголовків h2 */
-.section-title {
-    color: var(--title-text-color);
-    font-size: 36px;
-    line-height: 1.16;
-    font-weight: 700;
-    /* text-align: center; */
-
-}
-/* Стилізування заголовків h3 */
-.subtitle{
-    color: var(--title-text-color);
-}
-.features-items .subtitle {
-    font-size: 14px;
-    line-height: 1.14;
-    font-weight: 700;
-}
-.team .subtitle{
-    font-size: 16px;
-    line-height: 1.18;
-    font-weight: 500;
-}
-/* Блок Герой */
+/* Герой */
 .hero{
     background-color: var(--accent-background-color);
 }
@@ -146,50 +93,71 @@ body{
     font-size: 44px;
     line-height: 1.36;
     font-weight: 900;
-    letter-spacing: var(--added-letter-spacing);
+    letter-spacing: 0.06em;
     text-align: center;
 }
-
 
 /* Кнопка Замовити послугу */
 .button.primary{
     color: var(--primary-white-color);
     background-color: var(--accent-color);
-    letter-spacing: var(--added-letter-spacing);
+    letter-spacing: 0.06em;
     font-size: 16px;
-    line-height: 2.25;
+    line-height: 1.875;
     font-weight: 700;
 }
 
 /* Особливості */
-.features-items .text {
+/* h2 */
+.section-title {
+    color: var(--title-text-color);
+    font-size: 36px;
+    line-height: 1.17;
+    font-weight: 700;
+}
+
+.features-subtitle{
+    font-size: 14px;
+    line-height: 1.17;
+    font-weight: 700;
+    color: var(--title-text-color);
+}
+.features-text{
     font-size: 14px;
     line-height: 1.71;
 }
 
-/* Секція Наша команда */
+/* Наша команда */
 .team{
     background-color: var(--second-accent-background-color);
+}
+.team-item {
+    background-color: var(--primary-white-color);
 }
 .team .title{
     color: var(--title-text-color);
 }
-
+.team-subtitle {
+    color: var(--title-text-color);
+    font-size: 16px;
+    line-height: 1.18;
+    font-weight: 500;
+    text-align: center;
+}
 .team-dscr{
     font-size: 16px;
     line-height: 1.18;
+    text-align: center;
 }
 
-/* ПОРТФОЛІО */
-/* Кнопки сторінки портфоліо */
+/* --------ПОРТФОЛІО---------- */
+/* Кнопки*/
 .button.secondary {
     color: var(--title-text-color);
-    background-color: var(--second-accent-background-color);
-
     font-size: 16px;
     line-height: 1.62;
     font-weight: 500;
-    cursor: pointer;
+    background-color: var(--second-accent-background-color);
 }
 
 .button.secondary:hover,
@@ -198,21 +166,54 @@ body{
     color: var(--primary-white-color);
 }
 
-/* Стилізування h2(portfolio) */
+/* h2*/
 .portfolio-title{
     color: var(--title-text-color);
     font-size: 18px;
     line-height: 2;
     font-weight: 700;
-    letter-spacing: var(--added-letter-spacing);
+    letter-spacing: 0.06em;
 }
 
-/* Стилізування p(portfolio) */
+/* Картки з проєктами */
+.portfolio-card{
+    border: 1px solid #EEEEEE;
+}
 .portfolio-dscr{
     color: var(--primary-text-color);
     font-size: 16px;
     line-height: 1.87;
+    letter-spacing: 0.03em;
 }
 .portfolio-link{
     text-decoration: none;
 }
+
+
+
+
+/* Стилізування футеру */
+.bottom {
+    background-color: var(--title-text-color);
+}
+
+.logo-second-el {
+    color: var(--primary-white-color);
+}
+
+.bottom-address {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+}
+
+.location {
+    color: var(--primary-white-color);
+    letter-spacing: 0.03em;
+}
+.bottom .contact {
+    color: var(--link-address-bottom-color);
+    letter-spacing: 0.03em;
+}
+
+
