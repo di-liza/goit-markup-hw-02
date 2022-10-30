@@ -35,7 +35,7 @@ body{
     cursor: pointer;
 }
 
-/* Шапка */
+/* ----------HEADER---------- */
 /* Лого */
 .logo{
     color: var(--logo-second-color);
@@ -62,7 +62,7 @@ body{
     color: var(--accent-color);
 }
 
-/* Відображення поточної сторінки*/
+/* Виділення поточної сторінки кольором*/
 .site-nav .link.current{
     color: var(--accent-color);
 }
@@ -71,11 +71,9 @@ body{
     color: var(--primary-text-color);
     letter-spacing: 0.02em;
     font-weight: 500;
+    font-size: 14px;
 }
-/* .contact.link{
-    color: var(--primary-text-color);
-    letter-spacing: 0.03em;
-} */
+
 .contact.link:hover,
 .contact.link:focus{
     color: var(--accent-color);
@@ -95,6 +93,7 @@ body{
     font-weight: 900;
     letter-spacing: 0.06em;
     text-align: center;
+    text-transform: uppercase;
 }
 
 /* Кнопка Замовити послугу */
@@ -119,8 +118,8 @@ body{
 .features-subtitle{
     font-size: 14px;
     line-height: 1.17;
-    font-weight: 700;
     color: var(--title-text-color);
+    text-transform: uppercase;
 }
 .features-text{
     font-size: 14px;
@@ -171,7 +170,6 @@ body{
     color: var(--title-text-color);
     font-size: 18px;
     line-height: 2;
-    font-weight: 700;
     letter-spacing: 0.06em;
 }
 
@@ -190,9 +188,7 @@ body{
 }
 
 
-
-
-/* Стилізування футеру */
+/* ----------FOOTER---------- */
 .bottom {
     background-color: var(--title-text-color);
 }
